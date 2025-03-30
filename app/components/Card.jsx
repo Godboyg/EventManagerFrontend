@@ -16,7 +16,7 @@ function Card({ item , id , eventId , tru , att}) {
   const [ joined , setJoined ] = useState([])
 
   const handleDelete = async()=>{
-    const del = await axios.delete(`/myEvents/${item._id}`);
+    const del = await axios.delete(`/api/myEvents/${item._id}`);
     console.log("deleted",del);
     window.location.reload();
   }
@@ -29,7 +29,7 @@ function Card({ item , id , eventId , tru , att}) {
 
     const tok = token.slice(7);
 
-    const join = await axios.post(`/dashboard/events/join/${item._id}`, { token : tok });
+    const join = await axios.post(`/api/dashboard/events/join/${item._id}`, { token : tok });
     console.log("current event attendees",join.data.ev[0].attendees);
     setJoined(join.data.ev[0].attendees);
 
@@ -38,7 +38,7 @@ function Card({ item , id , eventId , tru , att}) {
     }
 
     if(isJoined){
-      axios.post(`/dashboard/events/leave/${item._id}` , { id : id })
+      axios.post(`/api/dashboard/events/leave/${item._id}` , { id : id })
       .then((res)=>{
         console.log("response",res.data[0].attendees);
         setJoined(res.data[0].attendees);

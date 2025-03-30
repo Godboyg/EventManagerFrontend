@@ -24,7 +24,7 @@ function dashboard() {
   },[])
 
   const getEvent = async()=>{
-    const res = await axios.get("/events");
+    const res = await axios.get("/api/events");
     setEvent(res.data);
   }
 
@@ -39,7 +39,7 @@ function dashboard() {
 
     const data = { query };
 
-    const response = await axios.post("/searchEvent", data);
+    const response = await axios.post("/api/searchEvent", data);
     setEvent(response.data);
   },300);
 

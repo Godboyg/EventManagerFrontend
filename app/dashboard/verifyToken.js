@@ -3,7 +3,7 @@ import axios from 'axios';
 const verify = async(token , res )=>{
 
     try{
-        const res = await axios.post("/verifyToken", { data : token });
+        const res = await axios.post("/api/verifyToken", { data : token });
 
         return res.data.decode._id;
     }

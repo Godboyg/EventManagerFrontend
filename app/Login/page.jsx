@@ -19,7 +19,7 @@ function Login() {
       setPassword("");
       const data = { email , password};
       console.log("form submitted");
-      const response = await axios.post("/loginUser", data );
+      const response = await axios.post("/api/loginUser", data );
       console.log("Res",response.data.token);
       let token = response.data.token;
       setTokenInCookie(token);

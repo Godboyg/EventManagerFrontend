@@ -33,7 +33,7 @@ function CreateEvent() {
 
         const data = { eventName , description , date , token};
 
-        const response = await axios.post("/createEvent", data);
+        const response = await axios.post("/api/createEvent", data);
 
         if(response){
             router.push("/dashboard");
@@ -47,7 +47,7 @@ function CreateEvent() {
       const token = re.slice(7);
 
       const myEvents = async()=>{
-        const res = await axios.post("/myEvents", { token : token});
+        const res = await axios.post("/api/myEvents", { token : token});
         console.log("resposne my event",res.data);
         setMyEvent(res.data);
       }
