@@ -3,7 +3,7 @@ const nextConfig = {
     async rewrites() {
         return [
           {
-            source: '/:path*',
+            source: '/api/:path*',
             destination: 'https://eventmanagerbackend-tdar.onrender.com/:path*', // Proxy API requests to Node.js server
           },
         ];
