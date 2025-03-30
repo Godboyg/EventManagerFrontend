@@ -1,168 +1,216 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
+.header{
+    padding: 20px;
+    width: 100%;
+    height: 15vh;
+    border-bottom: 1px solid black; 
+    display: flex;
     align-items: center;
-  }
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.171);
+}
 
-  .main ol {
-    text-align: center;
-  }
+.imgContainer{
+    width: 5vw;
+    height: 10vh;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
-  .ctas {
-    flex-direction: column;
-  }
+.headerImg{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
+.headerIcon{
+    padding: 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
-  }
+    background-color: black;
+    border-radius: 5px;
+    height: 6vh;
+    border: 1px solid aqua;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.rheaderIcon{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
+    height: 6vh;
+    border: 1px solid aqua;
+    width: 10vw;
+    margin-left: 10vw;
+    margin-top: 7vw;
+}
+
+.headerIcon:hover{
+    scale: 1.1;
+    transition: 0.5s ease;
+}
+
+.rheaderIcon:hover{
+    scale: 1.1;
+    transition: 0.5s ease;
+}
+
+.headerLink{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    /* background-color: rgba(0, 0, 0, 0); */
+}
+
+.containerOne{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.containerTwo{
+    width: 30vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.containerTwoImg{
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.formBox{
+    width: 20vw;
+    height: 20vh;
+    padding: 1vw;
+}
+
+.navBtn{
+    color: white;
+    background-color: black;
+}
+
+.navBtn:hover{
+   cursor: pointer;
+}
+
+.Main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.152);
+}
+
+.Box{
+    background-color: rgba(0, 0, 0, 0.262);
+    height: 30vh;
+    width: 30vw;
+    border-radius: 1vw;
+}
+
+.rBox{
+    background-color: rgba(0, 0, 0, 0.262);
+    height: 34vh;
+    width: 30vw;
+    border-radius: 1vw;
+}
+
+.BtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    background-color: black; 
+    padding: 1vw;
+    border-radius: 1vw;
+    width: 8vw;
+    border: 1px solid aqua;
+} 
+
+.BtnBox:hover{
+    scale: 1.1;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.Btn{
+    background-color: black;
+    color: white;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.25vw;
+}
+
+
+.Btn:hover{
+    cursor: pointer;
+}
+
+@media (max-width : 640px){
+    .imgContainer{
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .headerIcon{
+        height: 6vh;
+        padding: 5vw;
+    }
+
+    .containerTwo{
+        height: 25vh;
+        width: 40vw;
+    }
+
+    .Box{
+        border-radius: 20px;
+        height: 27vh;
+        width: 65vw;
+        padding: 5vw;
+        border: 1px solid black;
+    }
+
+    .rBox{
+        border-radius: 20px;
+        height: 33vh;
+        width: 65vw;
+        padding: 5vw;
+        border: 1px solid black;
+    }
+
+    .BtnBox{
+        font-size: 5vw;
+        height: 6vh;
+        width: 20vw;
+        margin-left: 16vw;
+    }
+
+    .Btn{
+        font-size: 3vw;
+    }
+
+    .rheaderIcon{
+        height: 5vh;
+        padding: 4vw 7vw 4vw 7vw;
+        margin-top: 26vw;
+        margin-left: 20vw;
+    }
 }

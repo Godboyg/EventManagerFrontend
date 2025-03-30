@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    padding: 3rem;
+    height: 110vh;
+    background-color: rgba(0, 0, 0, 0.478);
+}
+
+.form input{
+    width: 100%;
+    height: 6vh;
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+}
+
+p{
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 900;
+}
+
+#d{
+    width: 100%;
+    height: 10vh;
+}
+
+form{
+    margin-top: 1rem;
+}
+
+form button{
+    width: 100%;
+    height: 5vh;
+    background-color: rgba(0, 0, 255, 0.49);
+    color: white;
+    margin-top: 1rem;
+    border: none;
+}
+
+textarea{
+    width: 100%;
+    padding: 0.2rem;
+    height: 10vh;
+}
+
+#label{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form button:hover{
+    cursor: pointer;
+}
+
+.myEvents{
+    margin-top: 2rem;
+}
+
+.myEvents h1{
+    font-size: 3rem;
+}
+
+.event-box{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 35vh;
+}
+
+.event-box::-webkit-scrollbar{
+    display: none;
+}

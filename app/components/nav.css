@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-bar{
+    padding: 1.5rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.355);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text p{
+    font-size: 1.7rem;
+}
+
+.text p:hover{
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
