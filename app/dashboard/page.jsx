@@ -56,11 +56,12 @@ function dashboard() {
         router.push("/");
       }
       const tok = token.slice(7);
+      console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
         console.log("token expires",id);
-        if(id.status === 500){
-          Cookie.remove("token");
+        if(!id){
+          router.push("/");
         }
         console.log("id",id);
         setId(id);
