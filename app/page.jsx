@@ -24,7 +24,7 @@ function HomePage() {
     <div className="main">
       <div className={styles.container}>
          <div className={styles.containerOne}>
-          <div className={styles.headerIcon}>
+          <div className={styles.kheaderIcon}>
             <Link className={styles.headerLink} href="/Register">Get Start for free</Link>
           </div>
          </div>
