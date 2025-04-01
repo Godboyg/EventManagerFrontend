@@ -10,7 +10,7 @@ function Header() {
         <div className={styles.imgContainer}>
             <img className={styles.headerImg} src="https://images.pexels.com/photos/7679642/pexels-photo-7679642.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
         </div>
-        <div className={styles.headerIcon}>
+        <div className={styles.kheaderIcon}>
             <Link className={styles.headerLink} href="/Login">Sign in</Link>
         </div>
     </div>
