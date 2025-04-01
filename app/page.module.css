@@ -33,6 +33,17 @@
     border: 1px solid aqua;
 }
 
+.kheaderIcon{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
+    height: 6vh;
+    border: 1px solid aqua;
+}
+
 .sheaderIcon{
     padding: 5px;
     display: flex;
