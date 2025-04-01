@@ -33,6 +33,17 @@
     border: 1px solid aqua;
 }
 
+.sheaderIcon{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 5px;
+    height: 6vh;
+    border: 1px solid aqua;
+}
+
 .rheaderIcon{
     padding: 5px;
     display: flex;
@@ -58,6 +69,11 @@
 }
 
 .headerLink{
+    color: white;
+    text-decoration: none;
+}
+
+.sheaderLink{
     color: white;
     text-decoration: none;
 }
@@ -173,6 +189,7 @@
     .headerIcon{
         height: 6vh;
         padding: 5vw;
+        display: none;
     }
 
     .containerTwo{

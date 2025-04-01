@@ -10,9 +10,10 @@ html,body{
 }
 
 #input{
-    font-size: 1rem;
+    /* font-size: 1rem; */
+    /* height: 100%; */
     width: 100%;
-    background-color: white;
+    /* height: 10vw; */
     color: black;
     outline: none;
     border: none;
@@ -22,11 +23,19 @@ html,body{
     border: 1px solid rgba(128, 128, 128, 0.443);
     background-color: white;
     border-radius: 20px;
+    /* height: 10vw; */
     padding: 10px 5px;
     display: flex;
-    gap: 3px;
+    /* gap: 3px; */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.i{
+    /* height: 10vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dashText{
@@ -36,8 +45,12 @@ html,body{
     text-align: center;
 }
 
+h2{
+    font-weight: 900;
+}
+
 .main{
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.537);
 }
 
@@ -145,5 +158,9 @@ h3{
         margin-top: 10px;
         width: 30vw;
         padding: 2vw;
+    }
+
+    .search{
+        padding: 1px;
     }
 }

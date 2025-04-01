@@ -5,6 +5,9 @@ import ReduxProvider from "./redux/Provider";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Event Manager</title>
+      </head>
       <body>
         <ReduxProvider>{children}</ReduxProvider>
       </body>

@@ -2,6 +2,7 @@
 import Navbar from '@/app/components/Navbar'
 import React, { useEffect, useState } from 'react'
 import "./event.css";
+import "../../globals.css"
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Card from '@/app/components/Card';
@@ -28,7 +29,7 @@ function CreateEvent() {
 
         const re = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("token="));
 
-        const token = re.slice(7);
+        const token = re.slice(6);
         setTok(token);
 
         const data = { eventName , description , date , token};
@@ -44,7 +45,7 @@ function CreateEvent() {
 
       const re = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("token="));
 
-      const token = re.slice(7);
+      const token = re.slice(6);
 
       const myEvents = async()=>{
         const res = await axios.post("/api/myEvents", { token : token});
@@ -66,10 +67,10 @@ function CreateEvent() {
 
     useEffect(()=>{
       const runEffectTwice = () => {
-        setTriggerEffect(true); // First time: Triggers effect
+        setTriggerEffect(true); 
         setTimeout(() => {
-          setTriggerEffect(false);  // Second time: Resets state, triggers effect again
-        }, 1000); // Delay to simulate a "second" trigger
+          setTriggerEffect(false); 
+        }, 1000);
       };
   
       runEffectTwice();
@@ -78,17 +79,17 @@ function CreateEvent() {
   return (
     <>
     <Navbar/>
-    <div className="container">
+    <div className="w-full p-[10vw] bg-[rgb(118,118,118)]">
         <div className="container-box">
             <p>Create Events</p>
             <div className="form">
                 <form onSubmit={handleSubmit}>
                    <label id='label' htmlFor="">Event Name</label>
-                   <input type="text" placeholder='Event..' name='eventName' value={eventName} onChange={(e) => setEventName(e.target.value)} required={true}/>
+                   <input type="text" className='inp' placeholder='Event..' name='eventName' value={eventName} onChange={(e) => setEventName(e.target.value)} required={true}/>
                    <label id='label' htmlFor="">Description</label>
                    <textarea rows="4" cols="50" name='description' placeholder="Enter your description here..." required={true} value={description} onChange={(e) => setDescription(e.target.value)}/>
                    <label id='label' htmlFor="">Date</label>
-                   <input type="date" name='date' value={date} required={true} onChange={(e) => setDate(e.target.value)}/>
+                   <input type="date" name='date' className='inp' value={date} required={true} onChange={(e) => setDate(e.target.value)}/>
                    <button>Submit</button>
                 </form>
             </div>

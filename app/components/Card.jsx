@@ -27,7 +27,7 @@ function Card({ item , id , eventId , tru , att}) {
 
     const token = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("token="));
 
-    const tok = token.slice(7);
+    const tok = token.slice(6);
 
     const join = await axios.post(`/api/dashboard/events/join/${item._id}`, { token : tok });
     console.log("current event attendees",join.data.ev[0].attendees);

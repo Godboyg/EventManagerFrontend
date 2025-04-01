@@ -55,12 +55,12 @@ function dashboard() {
       if(!token){
         router.push("/");
       }
-      const tok = token.slice(7);
+      const tok = token.slice(6);
       console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
         console.log("token expires",id);
-        if(!id){
+        if(id.status == 502){
           router.push("/");
         }
         console.log("id",id);
@@ -79,7 +79,7 @@ function dashboard() {
         <div className="dashText">
           <h2>Welcome To Event Manager</h2>
           <div className="search">
-            <RiSearchLine />
+            <p className='i'><RiSearchLine /></p>
             <input type="text" id="input" placeholder="Search Event......" value={eventName} onChange={handleInputChange}/>
           </div>
         </div>
