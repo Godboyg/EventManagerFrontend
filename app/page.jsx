@@ -15,6 +15,7 @@ function HomePage() {
     if(token){
       alert("user authenticated access allowed");
       router.push("/dashboard");
+      return;
     }
   })
 
