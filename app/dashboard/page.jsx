@@ -60,10 +60,10 @@ function dashboard() {
       const v = async()=>{
         const id = await verify(tok);
         console.log("token expires",id);
-        if(id.status == 502){
-          Cookie.remove("token");
-          router.push("/");
-        }
+        // if(id.status == 502){
+        //   Cookie.remove("token");
+        //   router.push("/");
+        // }
         console.log("id",id);
         setId(id);
       }
