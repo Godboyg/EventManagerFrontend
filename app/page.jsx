@@ -17,7 +17,7 @@ function HomePage() {
       router.push("/dashboard");
       return;
     }
-  })
+  },[])
 
   return (
     <>
