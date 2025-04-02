@@ -61,6 +61,7 @@ function dashboard() {
         const id = await verify(tok);
         console.log("token expires",id);
         if(id.status == 502){
+          Cookie.remove("token");
           router.push("/");
         }
         console.log("id",id);
