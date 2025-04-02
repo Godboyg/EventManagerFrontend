@@ -19,14 +19,12 @@ function dashboard() {
   const [sevents , setsEvents] = useState();
   const [id, setId] = useState();
 
-  useEffect(()=>{
-    getEvent();
-  },[])
-
   const getEvent = async()=>{
     const res = await axios.get("/api/events");
     setEvent(res.data);
   }
+
+  getEvent();
 
   console.log("all events",event);
   const searchEvent = debounce(async(query)=>{
