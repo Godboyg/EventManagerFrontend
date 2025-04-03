@@ -60,7 +60,7 @@ function dashboard() {
       const v = async()=>{
         const res = await verify(tok);
         if (!res.ok) {
-            throw new Error(`HTTP Error: ${res.status}`);
+            console.log("error");
         }
         const response = res.json();
         console.log("response",res.status)
