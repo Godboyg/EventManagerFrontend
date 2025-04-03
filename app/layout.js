@@ -7,9 +7,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Event Manager</title>
-         <script async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2915175777820694"
-          crossorigin="anonymous"></script>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2915175777820694"
+     crossorigin="anonymous"></script>
             <meta name="google-adsense-account" content="ca-pub-2915175777820694">
       </head>
       <body>
