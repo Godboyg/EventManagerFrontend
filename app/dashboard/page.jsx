@@ -60,7 +60,7 @@ function dashboard() {
       const v = async()=>{
         const id = await verify(tok);
         console.log("loggedin user",id);
-        if(id._id){
+        if(id.status === 200){
           console.log("token not expired");
         }else{
           alert("token expired");
