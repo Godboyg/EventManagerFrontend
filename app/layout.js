@@ -7,6 +7,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <title>Event Manager</title>
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2915175777820694"
+          crossorigin="anonymous"></script>
       </head>
       <body>
         <ReduxProvider>{children}</ReduxProvider>
