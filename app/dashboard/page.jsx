@@ -58,19 +58,16 @@ function dashboard() {
       const tok = token.slice(6);
       console.log("token",tok);
       const v = async()=>{
-        const res = await verify(tok);
-        if (!res.ok) {
-            console.log("error");
-        }
-        const response = await res.json();
-        console.log("response",res.status)
-        console.log("response 355",response)
-        if(res.status === 502){
+        const id = await verify(tok);
+        if(id._id){
+          console.log("token not expired");
+        }else{
+          alert("token expired");
           Cookie.remove("token");
           router.push("/");
         }
-        console.log("token expires",res);
-        setId(res);
+        console.log("id",id._id);
+        setId(id._id);
       }
       v();
     } catch (error) { 
