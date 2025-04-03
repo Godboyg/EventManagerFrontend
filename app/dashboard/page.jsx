@@ -59,7 +59,9 @@ function dashboard() {
       console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
+        const response = id.json();
         console.log("response",id.status)
+        console.log("response",response)
         if(id.status === 502){
           Cookie.remove("token");
           router.push("/");
