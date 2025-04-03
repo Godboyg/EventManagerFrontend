@@ -55,7 +55,7 @@ function CreateEvent() {
 
       const v = async()=>{
         const id = await verify(token);
-        setId(id.data.decode._id);
+        setId(id._id);
       }
   
       v();
