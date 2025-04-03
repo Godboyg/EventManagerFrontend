@@ -67,7 +67,7 @@ function dashboard() {
           Cookie.remove("token");
           // router.push("/");
         }
-        setId(id._id);
+        setId(id.data.decode._id);
       }
       v();
     } catch (error) { 
