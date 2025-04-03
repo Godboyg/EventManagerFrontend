@@ -24,7 +24,11 @@ function dashboard() {
     setEvent(res.data);
   }
 
-  getEvent();
+  window.onload = function () {
+    getEvent();
+  }
+
+  //getEvent();
 
   console.log("all events",event);
   const searchEvent = debounce(async(query)=>{
