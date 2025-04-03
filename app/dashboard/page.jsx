@@ -58,16 +58,19 @@ function dashboard() {
       const tok = token.slice(6);
       console.log("token",tok);
       const v = async()=>{
-        const id = await verify(tok);
-        const response = id.json();
-        console.log("response",id.status)
+        const res = await verify(tok);
+        if (!res.ok) {
+            throw new Error(`HTTP Error: ${res.status}`);
+        }
+        const response = res.json();
+        console.log("response",res.status)
         console.log("response 355",response)
-        if(id.status === 502){
+        if(res.status === 502){
           Cookie.remove("token");
           router.push("/");
         }
-        console.log("token expires",id);
-        setId(id);
+        console.log("token expires",res);
+        setId(res);
       }
       v();
     } catch (error) { 
