@@ -64,8 +64,8 @@ function dashboard() {
           console.log("token not expired");
         }else{
           alert("token expired");
-          Cookie.remove("token");
-          router.push("/");
+          // Cookie.remove("token");
+          // router.push("/");
         }
         console.log("id",id._id);
         setId(id._id);
