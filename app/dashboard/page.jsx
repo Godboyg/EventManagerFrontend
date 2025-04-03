@@ -62,7 +62,7 @@ function dashboard() {
         if (!res.ok) {
             console.log("error");
         }
-        const response = res.json();
+        const response = await res.json();
         console.log("response",res.status)
         console.log("response 355",response)
         if(res.status === 502){
