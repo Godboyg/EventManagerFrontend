@@ -65,7 +65,7 @@ function dashboard() {
         }else{
           alert("token expired");
           Cookie.remove("token");
-          router.push("/");
+          // router.push("/");
         }
         setId(id._id);
       }
