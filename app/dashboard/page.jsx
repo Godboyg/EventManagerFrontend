@@ -69,7 +69,6 @@ function dashboard() {
       v();
     } catch (error) { 
       alert("token expired login again");
-      router.push("/");
     }
   },[])
 
