@@ -23,12 +23,7 @@ function dashboard() {
     const res = await axios.get("/api/events");
     setEvent(res.data);
   }
-
-  window.onload = function () {
-    getEvent();
-  }
-
-  //getEvent();
+  getEvent();
 
   console.log("all events",event);
   const searchEvent = debounce(async(query)=>{
@@ -62,9 +57,11 @@ function dashboard() {
       const v = async()=>{
         const id = await verify(tok);
         console.log("token expires",id);
-        if(id.status === 502){
-         Cookie.remove("token");
-         router.push("/");
+        if(id.ok == undefined){
+          console.log("");
+        }else{
+          Cookie.remove("token");
+          router.push("/");
         }
         console.log("id",id);
         setId(id);
