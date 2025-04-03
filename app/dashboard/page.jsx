@@ -60,6 +60,7 @@ function dashboard() {
         if(id.ok == undefined){
           console.log("token.....");
         }else{
+          console.log("token expired");
           Cookie.remove("token");
           router.push("/");
         }
