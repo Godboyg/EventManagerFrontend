@@ -66,7 +66,6 @@ function dashboard() {
           Cookie.remove("token");
           router.push("/");
         }
-        console.log("id",id._id);
         setId(id.data.decode._id);
       }
       v();
