@@ -59,17 +59,15 @@ function dashboard() {
       console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
-        console.log("loggedin innnnnnnnnnnnnnnnnnnnnnnnnnnnnn user",id.data.decode._id);
-        console.log("loggedin user",id._id);
-        if(id._id){
+        if(id.data.decode._id){
           console.log("token not expired");
         }else{
           alert("token expired");
-          // Cookie.remove("token");
-          // router.push("/");
+          Cookie.remove("token");
+          router.push("/");
         }
         console.log("id",id._id);
-        setId(id._id);
+        setId(id.data.decode._id);
       }
       v();
     } catch (error) { 
