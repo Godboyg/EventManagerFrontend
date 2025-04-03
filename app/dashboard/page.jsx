@@ -23,7 +23,10 @@ function dashboard() {
     const res = await axios.get("/api/events");
     setEvent(res.data);
   }
-  getEvent();
+
+  useEffect(()=>{
+    getEvent();
+  },[])
 
   console.log("all events",event);
   const searchEvent = debounce(async(query)=>{
