@@ -59,7 +59,7 @@ function dashboard() {
       console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
-        const response = await id.json();
+        const response = id.json();
         console.log("response",id.status)
         console.log("response 355",response)
         if(id.status === 502){
