@@ -26,7 +26,7 @@ function Login() {
 
       function setTokenInCookie(token) {
         const expirationDate = new Date();
-        expirationDate.setTime(expirationDate.getTime() + (15 * 24 * 60 * 60 * 1000));
+        expirationDate.setTime(expirationDate.getTime() + (60 * 60 * 24 * 5));
     
         document.cookie = `token=${token}; expires=${expirationDate.toUTCString()}`;
       }
