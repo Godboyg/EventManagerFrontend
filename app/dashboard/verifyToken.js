@@ -6,7 +6,7 @@ const verify = async(tok)=>{
         return res;
     }
     catch(err){
-        return err
+         res.status(401).json({ error: 'Invalid or expired token' });
     }
 }
 
