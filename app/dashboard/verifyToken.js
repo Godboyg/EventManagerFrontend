@@ -5,8 +5,8 @@ const verify = async(tok)=>{
         const res = await axios.post("/api/verifyToken", { data : tok });
         return res;
     }
-    catch(err){
-         res.status(401).json({ error: 'Invalid or expired token' });
+    catch(error){
+        return res.status(401).json({ error: 'Invalid or expired token' });
     }
 }
 
