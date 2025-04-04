@@ -63,10 +63,10 @@ function dashboard() {
         console.log("status",id.status);
         if(id.status === 200){
           console.log("token not expired");
-        }else{
+        }else if(id.status === 401){
           alert("token expired");
           Cookie.remove("token");
-          // router.push("/");
+          router.push("/");
         }
         setId(id.data.decode._id);
       }
