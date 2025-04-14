@@ -55,7 +55,7 @@ function dashboard() {
       if(!token){
         router.push("/");
       }
-      const tok = token.slice(6);
+      const tok = token.replace("token=","");
       console.log("token",tok);
       const v = async()=>{
         const id = await verify(tok);
